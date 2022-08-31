@@ -1,0 +1,112 @@
+@import '../general/color.scss';
+@import '../general/variable.scss';
+@import '../general/mixins.scss';
+
+.form-wrapper {
+  width: 100%;
+  max-width: 40rem;
+  margin: auto;
+  .form-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+    input,
+    textarea {
+      width: 100%;
+      padding: $input-padding;
+      border: none;
+      border-bottom: 2px solid $input-border-color;
+      border-radius: $input-border-radius;
+      background-color: $input-background-color;
+      font-size: 1rem;
+      outline: none;
+    }
+    textarea {
+      display: block;
+      min-height: 10rem;
+      resize: none;
+    }
+    .line {
+      width: 0;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      background-color: $input-active-border-color;
+      @include transition($transition-options);
+    }
+    label {
+      position: absolute;
+      top: 1.65rem;
+      left: 1.5rem;
+      color: #666;
+      @include transition($transition-options);
+    }
+
+    input:focus ~ .line,
+    textarea:focus ~ .line {
+      width: 100%;
+    }
+    input:focus,
+    input:not(:placeholder-shown),
+    textarea:focus,
+    textarea:not(:placeholder-shown) {
+      ~ label {
+        transform: scale(0.8) translate3D(0, -15px, 0);
+        transform-origin: top left;
+        //   top: 10px;
+      }
+    }
+  }
+  button {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    border: 1px solid $secondary-color;
+    background-color: $white;
+    color: $primary-font-color;
+    border-radius: $button-border-radius;
+    font-size: 1.12rem;
+    text-align: center;
+    outline: none;
+    line-height: 36px;
+    cursor: pointer;
+    &[type='submit'] {
+      background-color: $primary-color;
+      color: $secondary-font-color;
+    }
+    span {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-right: 1rem;
+      vertical-align: -3px;
+    }
+    img {
+      height: 1.75rem;
+      vertical-align: -0.375rem;
+      margin-right: 0.5rem;
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      @include transition($transition-options);
+    }
+    &:hover:after {
+      width: 100%;
+    }
+  }
+  .form-actions {
+    display: flex;
+    gap: 0.75rem;
+  }
+}

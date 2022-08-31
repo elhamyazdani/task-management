@@ -1,0 +1,37 @@
+@import '../general/color.scss';
+@import '../general/variable.scss';
+
+.todo-list {
+  border-radius: $todo-list-border-radius;
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  h2.title {
+    padding: $layout-padding;
+    font-size: $heading-second-font-size;
+    font-weight: bold;
+    color: $secondary-font-color;
+  }
+  .body {
+    flex: 1;
+    padding: $todo-list-body-padding;
+    margin-top: $todo-list-body-margin-top;
+    border-radius: $todo-list-border-radius;
+    background-color: $todo-list-background-color;
+    .no-todo {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 1.5;
+      font-size: 1.5rem;
+    }
+    .has-todo {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+  }
+}

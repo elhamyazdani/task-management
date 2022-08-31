@@ -1,0 +1,21 @@
+@import './general/color.scss';
+@import './general/variable.scss';
+
+.form-wrapper {
+  padding: $layout-padding;
+  h2.title {
+    font-size: $heading-second-font-size;
+    font-weight: bold;
+    color: $primary-font-color;
+    margin-bottom: 1em;
+  }
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  section.todo-list {
+    flex: 1;
+  }
+}

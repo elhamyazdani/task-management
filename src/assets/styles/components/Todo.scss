@@ -1,0 +1,42 @@
+@import '../general/color.scss';
+@import '../general/variable.scss';
+
+.todo {
+  flex: 0 1 #{$todo-width};
+  padding: $todo-padding;
+  background-color: $white;
+  border-radius: $todo-border-radius;
+  box-shadow: $todo-box-shadow;
+  margin-bottom: 1rem;
+  .title {
+    font-size: $todo-title-font-size;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  .description {
+    font-size: $todo-description-font-size;
+    margin-bottom: 2.5rem;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    .status {
+      font-size: $todo-status-font-size;
+      color: $white;
+      padding: $todo-status-padding;
+      min-width: 10rem;
+      background: $primary-color;
+      border-radius: $todo-status-border-radius;
+      text-align: center;
+    }
+    button {
+      border: none;
+      background: none;
+      outline: none;
+      cursor: pointer;
+      img {
+        height: 2.5rem;
+      }
+    }
+  }
+}

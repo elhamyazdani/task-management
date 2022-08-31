@@ -1,0 +1,12 @@
+@import '../general/color.scss';
+@import '../general/variable.scss';
+
+.header {
+  display: flex;
+  gap: 1rem;
+  padding: $layout-padding;
+  background-color: $primary-color;
+  color: $secondary-font-color;
+  font-size: $heading-font-size;
+  font-weight: bold;
+}

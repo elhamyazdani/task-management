@@ -1,0 +1,12 @@
+@import './general/color.scss';
+@import './general/reset.scss';
+
+html,
+body,
+* {
+  font-family: proxima-nova, sans-serif;
+}
+
+body {
+  color: $primary-font-color;
+}
